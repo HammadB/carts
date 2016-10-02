@@ -1,0 +1,54 @@
+html, body {   
+     margin:0; /* remove default margin */
+     padding:0; /* remove default padding */
+     width:100%; /* take full browser width */
+     height:100%; /* take full browser height*/
+}
+
+.btn-fixed-width {
+    width: 300px;
+    box-shadow: 0 2px 5px black;
+    margin-top: 30px;
+}
+
+.container{
+    margin-top: 230px;
+}
+
+.center-block{
+    text-align: center;
+}
+
+.registration{
+    margin-top: 30px;
+}
+
+.shopping-cart-container {
+    padding: 10px 20px;
+}
+
+.shopping-cart{
+    margin-top: 50px;
+}
+
+.footer{
+    position: absolute;
+    bottom: 20;
+    text-align: center;
+    width: 100%;
+}
+
+.table-responsive{
+    border: none;
+}
+
+.pay-button{
+    margin-top: 50px;
+}
+
+body {
+    color: #fff;
+    /*background-color: #ffcb2c;*/
+    background: radial-gradient(circle, #F57C00, #FF5722);
+}
+

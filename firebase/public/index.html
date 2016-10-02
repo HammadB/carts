@@ -1,0 +1,70 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://use.fontawesome.com/1703a8fbc6.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/3.4.1/firebase.js"></script>
+        <script>
+            // Initialize Firebase
+            var config = {
+            apiKey: "AIzaSyDTtQ7AzQUnrx0uEmTwjST9xbpQK7Tah80",
+            authDomain: "carts-c0d29.firebaseapp.com",
+            databaseURL: "https://carts-c0d29.firebaseio.com",
+            storageBucket: "",
+            messagingSenderId: "945119553567"
+            };
+            firebase.initializeApp(config);
+        </script>
+        <title> Carts </title>
+    </head>
+    <body>
+        <div id="signin-container" class="container text-center">
+            <h1> Carts <i class="fa fa-shopping-cart" aria-hidden="true"></i></h1>
+            <button id="signin" class="btn btn-primary btn-lg btn-block btn-fixed-width center-block"> Sign In </button>
+        </div>
+        <form class="form-inline container" id="register-device" style="display: none;">
+            <div class="col-md-4 center-block">
+                <input type="text" class="form-control" id="device_id" name="device_id">
+            </div>
+            <div class="col-md-4 center-block registration">
+                <button type="submit" class="btn btn-primary">Register Cart</button>
+            </div>
+        </form>
+        <div class="shopping-cart-container" style="display: none;">
+            <h2 class="shopping-heading center-block"> My Shopping Cart </h2>
+            <table class="table table-responsive shopping-cart">
+                <thead> 
+                    <tr> 
+                        <th>Product</th> 
+                        <th>Qty.</th> 
+                        <th>Price</th> 
+                        <th>Total</th> 
+                    </tr> 
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+            <div class="pay-button center-block">
+                <form action="https://eltagqido1.execute-api.us-west-2.amazonaws.com/prod/testFunc" method="POST">
+                    <input type="hidden" class="amount" name="amount" value="0">
+                    <script
+                        src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                        data-key="pk_test_tKHWuQuQkpG7hT0Tx3gwj8Yj"
+                        data-name="Stripe.com"
+                        data-description="Widget"
+                        data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
+                        data-locale="auto"
+                        data-zip-code="true">
+                    </script>
+                </form>
+            </div>
+        </div>
+        <footer class="footer">
+            <button id="signout" class="btn btn-primary btn-lg" style="display: none;"> Sign Out </button>
+        </footer>
+        <script src="app.js"></script>
+    </body>
+</html>
